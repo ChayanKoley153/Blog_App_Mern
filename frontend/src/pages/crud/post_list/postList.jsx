@@ -39,55 +39,53 @@ export const PostList = () => {
   }
 
   return (
-    <div className="post-container">
-      <h1 className="main-heading">
-        All Posts Of User
-      </h1>
-
+    <>
       <Link to="/product/add" style={{ display: "inline-block", margin: "10px 0" }}>
         Add Post
       </Link>
+      <div className="post-container">
+        {!loading && Array.isArray(data) && data.length === 0 ? (
+          <h2 className="no-post">
+            No Posts Found
+          </h2>
+        ) : (
+          [...data].reverse().map((post, index) => (
+            <div
+              className="post-card"
+              key={post._id}
+            >
+              <div className="post-top">
+                <span className="post-index">
+                  #{index + 1}
+                </span>
+              </div>
 
-      {!loading && Array.isArray(data) && data.length === 0 ? (
-        <h2 className="no-post">
-          No Posts Found
-        </h2>
-      ) : (
-        data?.map((post, index) => (
-          <div
-            className="post-card"
-            key={post._id}
-          >
-            <div className="post-top">
-              <span className="post-index">
-                #{index + 1}
-              </span>
+              <h2 className="post-title">
+                {post.title}
+              </h2>
+
+              <div className="btn-group">
+                <button
+                  className="edit-btn"
+                  onClick={() =>
+                    handleDetails(post._id)
+                  }
+                >
+                  View Details
+                </button>
+
+                <button
+                  className="delete-btn"
+                  onClick={() => handleDelete(post._id)}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
+          ))
+        )}
+      </div>
+    </>
 
-            <h2 className="post-title">
-              {post.title}
-            </h2>
-
-            <div className="btn-group">
-              <button
-                className="edit-btn"
-                onClick={() =>
-                  handleDetails(post._id)
-                }
-              >
-                View Details
-              </button>
-
-              <button
-                className="delete-btn"
-                onClick={() => handleDelete(post._id)}
-              >
-                Delete
-              </button>
-            </div>
-          </div>
-        ))
-      )}
-    </div>
   );
 };

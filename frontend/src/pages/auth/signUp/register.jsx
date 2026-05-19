@@ -7,7 +7,6 @@ import endPoints from '../../../../api/endpoints';
 
 
 export default function Register() {
-
     const { loading, postData, error: apiError, data } = useRegisterApi(endPoints.auth.register);
 
     const [user, setUser] = useState({

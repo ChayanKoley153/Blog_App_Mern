@@ -32,9 +32,6 @@ const PostAdd = () => {
 
   return (
     <div>
-      <Link className='list-link' to="/product/list">
-        <h3>Go to List</h3>
-      </Link>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <h2>Add a post</h2>
         <div className="form-group">

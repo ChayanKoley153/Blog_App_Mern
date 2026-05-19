@@ -1,9 +1,15 @@
 /* register.css */
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form {
     width: 100%;
     max-width: 420px;
-    margin: 50px auto;
+    margin: 100px auto;
     padding: 30px;
     border-radius: 12px;
     background: #ffffff;

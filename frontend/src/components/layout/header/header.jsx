@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
     FaUserCircle,
     FaBars,
@@ -11,10 +11,19 @@ import {
 } from "react-icons/fa";
 
 import "./header.css";
+import Cookies from "js-cookie";
+
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [profileOpen, setProfileOpen] = useState(false);
+    const navigate = useNavigate();
+
+
+    const handleLogout = () => {
+        Cookies.remove("accesstoken");
+        navigate('/auth/login')
+    }
 
     return (
         <header className="header">
@@ -46,9 +55,12 @@ const Header = () => {
                     {profileOpen && (
                         <div className="profile-dropdown">
                             <Link to="/profile">Profile</Link>
-                            <Link to="/logout">
+                            <button
+                                className="logout-btn"
+                                onClick={handleLogout}
+                            >
                                 <FaSignOutAlt /> Logout
-                            </Link>
+                            </button>
                         </div>
                     )}
                 </div>

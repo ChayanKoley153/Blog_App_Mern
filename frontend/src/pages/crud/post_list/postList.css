@@ -1,97 +1,96 @@
 /* postList.css */
 
-
 .post-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  height: 100vh;
 
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .post-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-    border: 1px solid #e5e5e5;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  border: 1px solid #e5e5e5;
+  width: 500px;
 }
 
 .post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 .post-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .post-index {
-    font-size: 14px;
-    font-weight: 600;
-    color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
 }
 
 .post-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 20px;
-    line-height: 1.4;
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .btn-group {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .edit-btn,
 .delete-btn {
-    flex: 1;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .edit-btn {
-    background: #2563eb;
-    color: #fff;
+  background: #2563eb;
+  color: #fff;
 }
 
 .edit-btn:hover {
-    background: #1d4ed8;
+  background: #1d4ed8;
 }
 
 .delete-btn {
-    background: #dc2626;
-    color: #fff;
+  background: #dc2626;
+  color: #fff;
 }
 
 .delete-btn:hover {
-    background: #b91c1c;
+  background: #b91c1c;
 }
 
 .loading,
 .error,
 .no-post {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 24px;
-    font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .no-post {
-    color: #666;
+  color: #666;
 }

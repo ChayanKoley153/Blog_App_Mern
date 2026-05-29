@@ -343,7 +343,7 @@ class AuthController {
       });
 
       // ✅ Create reset link
-      const resetLink = `${`http://localhost:3000`}/auth/reset-password/${
+      const resetLink = `${`http://localhost:5173`}/auth/reset-password/${
         user._id
       }/${token}`;
 

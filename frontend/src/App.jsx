@@ -11,13 +11,13 @@ import CheckPrivateRouting from "./routes/CheckPrivateRouting";
 import NotFound from "./pages/notFound/notFound";
 import Header from "./components/layout/header/header";
 import { Footer } from "./components/layout/footer/footer";
-
+import ForgotPassword from "./pages/auth/forgetPassword/forgotPassword";
+import ResetPassword from "./pages/auth/resetPassword/resetPassword";
 
 
 const Register = lazy(() => import("./pages/auth/signUp/register"));
 const Login = lazy(() => import("./pages/auth/signIn/login"));
 const VerifyOTP = lazy(() => import("./pages/auth/otp/verifyotp"));
-
 
 
 function App() {
@@ -40,6 +40,14 @@ function App() {
       {
         path: "*",
         component: <NotFound />
+      },
+      {
+        path: "/auth/forgot-password",
+        component: <ForgotPassword/>
+      },
+      {
+        path: "/auth/reset-password/:id/:token",
+        component: <ResetPassword/>
       }
     ];
 

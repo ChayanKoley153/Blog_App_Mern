@@ -3,6 +3,8 @@ const endPoints = {
     login: "/auth/login",
     verify_otp: "/auth/verify-otp",
     register: "/auth/register",
+    forget_password: "/auth/reset-password-link",
+    reset_password: (id, token) => `/auth/reset-password/${id}/${token}`,
   },
 
   crud: {

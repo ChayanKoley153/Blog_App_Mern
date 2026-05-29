@@ -99,6 +99,20 @@
     cursor: pointer;
 }
 
+.logout-btn {
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #f1f1f1;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {

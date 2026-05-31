@@ -2,8 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import endPoints from "../../../../api/endpoints";
 import { useDelete } from "../../../../customHooks/crudhooks/useDelete";
-import "./postdelete.css";
-
+import "./style.css";
 import {
     confirmDeleteAlert,
     successAlert,

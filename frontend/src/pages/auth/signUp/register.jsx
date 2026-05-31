@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './register.css';
 import { useRegisterApi } from '../../../../customHooks/authhooks/auth.register';
 import RegisterCom from '../../../components/authCom/registerCom';
 import endPoints from '../../../../api/endpoints';
+import './style.css';
+
 
 
 export default function Register() {

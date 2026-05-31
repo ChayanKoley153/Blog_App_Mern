@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
 import { useResetPassword } from "../../../../customHooks/authhooks/auth.resetPassword";
-import "./resetpassword.css";
+import "./style.css";
 
 const ResetPassword = () => {
     const { id, token } = useParams();

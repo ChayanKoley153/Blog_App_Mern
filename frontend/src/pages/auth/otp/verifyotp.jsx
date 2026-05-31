@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./otp.css";
+import "./style.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { OtpCom } from "../../../components/authCom/otpCom";
 import endPoints from "../../../../api/endpoints";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginCom } from '../../../components/authCom/loginCom';
-import './login.css';
+import './style.css';
 import endPoints from '../../../../api/endpoints';
 import { useLoginApi } from '../../../../customHooks/authhooks/auth.login';
 

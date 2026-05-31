@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
-import "./forgotpassword.css";
+import "./style.css";
 import { useForgotPassword } from "../../../../customHooks/authhooks/auth.forgetPassword";
 
 const ForgotPassword = () => {

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { Toaster } from "sonner";
 import FormLoader from "./components/loaderCom/loadercom";
@@ -26,6 +26,10 @@ function App() {
 
     const publicRoute = [
       {
+        path: "/",
+        component: <Navigate to="/auth/login" replace />,
+      },
+      {
         path: "/auth/register",
         component: <Register />,
       },
@@ -38,17 +42,17 @@ function App() {
         component: <VerifyOTP />,
       },
       {
-        path: "*",
-        component: <NotFound />
-      },
-      {
         path: "/auth/forgot-password",
-        component: <ForgotPassword/>
+        component: <ForgotPassword />,
       },
       {
         path: "/auth/reset-password/:id/:token",
-        component: <ResetPassword/>
-      }
+        component: <ResetPassword />,
+      },
+      {
+        path: "*",
+        component: <NotFound />,
+      },
     ];
 
     const privateRoute = [
@@ -75,6 +79,7 @@ function App() {
     ];
 
     const validRoutes = [
+      "/",
       "/auth/register",
       "/auth/login",
       "/auth/verify-otp",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import axiosInstance from "../../api/axios";
-import endpoints from "../../api/endpoints";
+import endpoints from "../../api/endpoints.js";
 
 
 

@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { useAdd } from '../../../../customHooks/crudhooks/useAdd';
 import './style.css';
 import { Link, useNavigate } from 'react-router-dom';
-import endpoints from '../../../../api/endPoints';
+import endpoints from '../../../../api/endpoints.js';
 
 
 const PostAdd = () => {

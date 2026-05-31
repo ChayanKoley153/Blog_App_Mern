@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useRegisterApi } from '../../../../customHooks/authhooks/auth.register';
 import RegisterCom from '../../../components/authCom/registerCom';
 import './style.css';
-import endpoints from '../../../../api/endpoints';
+import endpoints from '../../../../api/endpoints.js';
 
 
 

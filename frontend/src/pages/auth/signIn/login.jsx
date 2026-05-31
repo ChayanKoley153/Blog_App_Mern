@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { LoginCom } from '../../../components/authCom/loginCom';
 import './style.css';
 import { useLoginApi } from '../../../../customHooks/authhooks/auth.login';
-import endpoints from '../../../../api/endpoints';
+import endpoints from '../../../../api/endpoints.js';
 
 
 export default function Login() {

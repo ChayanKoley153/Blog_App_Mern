@@ -9,6 +9,8 @@ import {
 } from "../../../components/swalAlert/swalAlert.js";
 import endpoints from "../../../../api/endpoints.js";
 
+
+
 export const PostDelete = () => {
     const { id } = useParams();
     const navigate = useNavigate();

@@ -3,7 +3,7 @@ import "./style.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { OtpCom } from "../../../components/authCom/otpCom";
 import { useOtpApi } from "../../../../customHooks/authhooks/auth.otp";
-import endpoints from "../../../../api/endpoints";
+import endpoints from "../../../../api/endpoints.js";
 
 export default function VerifyOTP() {
     const navigate = useNavigate();

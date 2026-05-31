@@ -3,7 +3,10 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import "./style.css";
 import { useList } from '../../../../customHooks/crudhooks/useList';
 import { useUpdate } from '../../../../customHooks/crudhooks/useEdit';
-import endpoints from '../../../../api/endpoints';
+import endpoints from '../../../../api/endpoints.js';
+
+
+
 
 export const PostEdit = () => {
     const { id } = useParams();

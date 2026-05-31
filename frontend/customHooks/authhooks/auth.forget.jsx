@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import axiosInstance from "../../api/axios";
-import endPoints from "../../api/endPoints";
-
+import endpoints from "../../api/endpoints";
 
 
 
@@ -23,7 +22,7 @@ export const useForgotPassword = () => {
             };
 
             const res = await axiosInstance.post(
-                endPoints.auth.forget_password,
+                endpoints.auth.forget_password,
                 payload
             );
 

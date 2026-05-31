@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginCom } from '../../../components/authCom/loginCom';
 import './style.css';
-import endPoints from '../../../../api/endpoints';
 import { useLoginApi } from '../../../../customHooks/authhooks/auth.login';
+import endpoints from '../../../../api/endpoints';
 
 
 export default function Login() {
 
-    const { loading, postData, error: apiError, data } = useLoginApi(endPoints.auth.login);
+    const { loading, postData, error: apiError, data } = useLoginApi(endpoints.auth.login);
 
     const [user, setUser] = useState({
         email: "",

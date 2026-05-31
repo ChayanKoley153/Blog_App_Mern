@@ -3,14 +3,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { ProductValidator } from '../../../../validators/productValidator';
 import { useForm } from 'react-hook-form';
 import { useAdd } from '../../../../customHooks/crudhooks/useAdd';
-import endPoints from '../../../../api/endpoints';
 import './style.css';
 import { Link, useNavigate } from 'react-router-dom';
+import endpoints from '../../../../api/endPoints';
 
 
 const PostAdd = () => {
   const navigate = useNavigate();
-  const { AddData } = useAdd(endPoints.crud.add);
+  const { AddData } = useAdd(endpoints.crud.add);
 
   const {
     register,

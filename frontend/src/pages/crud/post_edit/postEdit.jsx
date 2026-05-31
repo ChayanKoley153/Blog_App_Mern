@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import endPoints from '../../../../api/endpoints';
 import "./style.css";
 import { useList } from '../../../../customHooks/crudhooks/useList';
 import { useUpdate } from '../../../../customHooks/crudhooks/useEdit';
+import endpoints from '../../../../api/endpoints';
 
 export const PostEdit = () => {
-
     const { id } = useParams();
     const navigate = useNavigate();
 
     const {
         data,
         getData
-    } = useList(endPoints.crud.details(id));
+    } = useList(endpoints.crud.details(id));
 
     const {
         loading,

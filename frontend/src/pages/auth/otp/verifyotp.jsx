@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { OtpCom } from "../../../components/authCom/otpCom";
-import endPoints from "../../../../api/endpoints";
 import { useOtpApi } from "../../../../customHooks/authhooks/auth.otp";
+import endpoints from "../../../../api/endpoints";
 
 export default function VerifyOTP() {
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ export default function VerifyOTP() {
 
     const userId = location.state?.userId;
 
-    const { loading, postData, error: apiError, data: apiData } = useOtpApi(endPoints.auth.verify_otp);
+    const { loading, postData, error: apiError, data: apiData } = useOtpApi(endpoints.auth.verify_otp);
 
     const [data, setData] = useState({
         otp: "",

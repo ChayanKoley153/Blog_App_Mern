@@ -1,4 +1,4 @@
-const endPoints = {
+const endpoints = {
   auth: {
     login: "/auth/login",
     verify_otp: "/auth/verify-otp",
@@ -16,4 +16,4 @@ const endPoints = {
   },
 };
 
-export default endPoints;
+export default endpoints;

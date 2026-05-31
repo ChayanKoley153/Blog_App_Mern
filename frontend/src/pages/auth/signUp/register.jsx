@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useRegisterApi } from '../../../../customHooks/authhooks/auth.register';
 import RegisterCom from '../../../components/authCom/registerCom';
-import endPoints from '../../../../api/endpoints';
 import './style.css';
+import endpoints from '../../../../api/endpoints';
 
 
 
 export default function Register() {
-    const { loading, postData, error: apiError, data } = useRegisterApi(endPoints.auth.register);
+    const { loading, postData, error: apiError, data } = useRegisterApi(endpoints.auth.register);
 
     const [user, setUser] = useState({
         name: "",

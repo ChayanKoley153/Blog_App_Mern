@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import endPoints from '../../../../api/endpoints';
 import { useList } from '../../../../customHooks/crudhooks/useList';
 import "./style.css";
+import endpoints from '../../../../api/endpoints';
 
 export const PostDetails = () => {
-
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -14,7 +13,7 @@ export const PostDetails = () => {
         loading,
         error,
         getData
-    } = useList(endPoints.crud.details(id));
+    } = useList(endpoints.crud.details(id));
 
     useEffect(() => {
         getData();

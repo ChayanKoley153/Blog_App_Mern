@@ -1,17 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useList } from "../../../../customHooks/crudhooks/useList";
-import endPoints from "../../../../api/endpoints";
 import "./style.css";
+import endpoints from "../../../../api/endpoints";
 
 export const PostList = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const fetched = useRef(false);
 
-  const { data, loading, error, getData } = useList(
-    endPoints.crud.list
-  );
+  const { data, loading, error, getData } = useList(endpoints.crud.list);
 
   useEffect(() => {
     if (!fetched.current) {

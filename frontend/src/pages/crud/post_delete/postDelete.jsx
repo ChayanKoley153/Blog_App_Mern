@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import endPoints from "../../../../api/endpoints";
 import { useDelete } from "../../../../customHooks/crudhooks/useDelete";
 import "./style.css";
 import {
@@ -8,14 +7,13 @@ import {
     successAlert,
     errorAlert
 } from "../../../components/swalAlert/swalAlert.js";
+import endpoints from "../../../../api/endpoints.js";
 
 export const PostDelete = () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    const { loading, deleteData } = useDelete(
-        endPoints.crud.delete(id)
-    );
+    const { loading, deleteData } = useDelete(endpoints.crud.delete(id));
 
     const handleDelete = async () => {
         const result = await confirmDeleteAlert();

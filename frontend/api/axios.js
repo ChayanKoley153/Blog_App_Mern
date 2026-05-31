@@ -2,7 +2,7 @@ import axios from "axios";
 import { getCookie } from "cookies-next";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000",
+  baseURL: "https://blog-app-5ao6.onrender.com",
 });
 
 axiosInstance.interceptors.request.use(

@@ -5,8 +5,9 @@ import {
     FaEyeSlash,
 } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
-import { useResetPassword } from "../../../../customHooks/authhooks/auth.resetPassword";
 import "./style.css";
+import { useResetPassword } from "../../../../customHooks/authhooks/auth.reset";
+
 
 const ResetPassword = () => {
     const { id, token } = useParams();

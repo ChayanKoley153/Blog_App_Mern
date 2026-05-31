@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
 import "./style.css";
-import { useForgotPassword } from "../../../../customHooks/authhooks/auth.forgetPassword";
+import { useForgotPassword } from "../../../../customHooks/authhooks/auth.forget";
+
+
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState("");

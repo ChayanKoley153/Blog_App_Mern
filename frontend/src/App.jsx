@@ -87,6 +87,8 @@ function App() {
       "/product/list",
     ];
 
+    
+
     const isDynamicRoute =
       location.pathname.startsWith("/product/details/") ||
       location.pathname.startsWith("/product/edit/") ||

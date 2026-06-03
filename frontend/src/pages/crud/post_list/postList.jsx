@@ -5,8 +5,6 @@ import "./style.css";
 import endpoints from "../../../../api/endpoints.js";
 
 
-
-
 export const PostList = () => {
   const { id } = useParams();
   const navigate = useNavigate();

@@ -21,7 +21,7 @@ export const PostEdit = () => {
         loading,
         error,
         updateData
-    } = useUpdate(endPoints.crud.edit(id));
+    } = useUpdate(endpoints.crud.update(id));
 
     const [formData, setFormData] = useState({
         title: "",
